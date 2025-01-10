@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const isMainnet = process.argv[2] == "mainnet";
 
-const chainId = isMainnet ? 1 : 5;
+const chainId = isMainnet ? 1 : 11155111;
 
 const privateKey = isMainnet
   ? process.env.MAINNET_WALLET_PRIVATE_KEY
@@ -18,19 +18,19 @@ const wssProviderUrl = isMainnet
 
 const uniswapUniversalRouterAddress = isMainnet
   ? "0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B"
-  : "0x4648a43B2C14Da09FdF82B161150d3F634f40491";
+  : "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD";
 
 const uniswapV2RouterAddress = isMainnet
-  ? "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
-  : "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
+  ? "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45 "
+  : "0x89031Ff7240456b4997e367b48eDED3415606e0D";
 
 const wETHAddress = isMainnet
   ? "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-  : "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6";
+  : "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14";
 
 const uniswapV2FactoryAddress = isMainnet
   ? "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"
-  : "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
+  : "0x0227628f3F023bb0B980b67D528571c95c6DaC1c";
 
 const gasBribe = process.env.GAS_BRIBE_IN_GWEI;
 const buyAmount = process.env.BUY_AMOUNT_IN_WEI;
